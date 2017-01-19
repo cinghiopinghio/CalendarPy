@@ -1,0 +1,13 @@
+
+year: 2017
+
+font: '/usr/share/fonts/TTF/FiraSans-Regular.ttf'
+font-mono: '/usr/share/fonts/TTF/UbuntuMono-R.ttf'
+
+
+# first week day
+# 0: Monday; 6: Sunday
+first_week_day: 0
+
+# locale, ex. de_DE.utf8
+locale: 'it_IT.utf8'
