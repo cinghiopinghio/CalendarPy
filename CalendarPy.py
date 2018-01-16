@@ -28,7 +28,7 @@ DAYS = [locale.nl_langinfo(d).capitalize() for d in DAYS]
 MONTHS = [
     locale.MON_1,
     locale.MON_2,
-    locale.MON_4,
+    locale.MON_3,
     locale.MON_4,
     locale.MON_5,
     locale.MON_6,

@@ -1,12 +1,19 @@
-YEAR=2017
+YEAR:=$(shell grep year config.yaml | cut -d\  -f2)
+
+.PHONY: run merge clean all
 
 run:
-	python3 ./CalendarPy.py $(YEAR)
+	echo $(YEAR)
+	python3 ./CalendarPy.py
 
 
 merge: $(YEAR)-??.pdf
-	pdfjoin --a4paper --fitpaper false --landscape --outfile calendar-$(YEAR).pdf -- $(YEAR)-*.pdf 
+	pdfjoin --a4paper --fitpaper false --landscape --outfile calendar-$(YEAR).pdf -- $(YEAR)-*.pdf
 
 
 clean:
 	rm $(YEAR)*.pdf
+
+
+all:	run merge clean
+	@echo Get your calendar
